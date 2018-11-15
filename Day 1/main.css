@@ -1,0 +1,35 @@
+/* Styling the look of the clock */
+
+body{
+    background: #824438;
+    background-image: url("assets/road.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+h2{
+    color: #fff;
+}
+
+#clock-frame{
+    margin: 25% 20%;
+    text-align: center;
+}
+
+.time-frame{
+    color: #fff;
+    padding: .2em;
+    margin: 10% 6%;
+    border-style: solid;
+    border-width: 2px;
+    display: block;
+    width: 15%;
+    float: left;
+    overflow: hidden;
+
+}
+
+.time-frame:hover{
+    border-color: aqua;
+}
+
