@@ -11,5 +11,5 @@
 - [x] Day 1: A very simple and basic digital clock that works:
   ###### website coming soon | [View on GitHub](https://github.com/giantthinker/100-days-of-JS/tree/master/Day%201) 
   
-- [x] Day 1: A very simple and basic digital clock that works:
+- [x] Day 2: A TODO app written without framework:
   ###### website coming soon | [View on GitHub](https://github.com/giantthinker/100-days-of-JS/tree/master/Day%20%202) 
