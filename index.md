@@ -9,4 +9,4 @@
 
 
 - [x] Day 1: A very simple and basic digital clock that works:
-  ###### website coming soon | [View on GitHub](https://github.com/giantthinker/100-days-of-JS/tree/master/Day%201) :octocat:
+  ###### website coming soon | [View on GitHub](https://github.com/giantthinker/100-days-of-JS/tree/master/Day%201) 
