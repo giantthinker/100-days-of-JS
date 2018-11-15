@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bouncing bubbles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <h1>A simple TODO </h1>
+
+    <div>
+        <form method="POST" action="#" target="hiddenFrame">
+
+            <input name="todo" type="text" id="task">
+            <input type="date" >
+            <input type="time" >
+            <button id="submit">Add</button>
+    
+        </form>
+    </div>
+   
+    <div>
+
+        <div id="todos" >
+            <p class="single-todo" id="task-display"></p>
+            <p class="todo-date"></p>
+            <p class="todo-time"></p>
+        </div>
+
+    </div>
+
+    <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+    <script>
+
+        //The submit button
+        var submit = document.getElementById("submit");
+            submit.addEventListener("click", addTodo);
+        var itemNumber = 0;
+
+        function addTodo(){ //Function handling the adding of tasks
+            var clearTask = document.getElementById("task"); 
+            var task = document.getElementById("task").value;
+            console.log(task);
+            itemNumber++;
+            console.log(itemNumber);
+
+            //TODO: refactor the above code
+            
+            /*
+            * Create the todo element.
+            */
+            var showTask = document.getElementById("task-display");
+            var singleTask = document.createElement("p");
+            singleTask.classList.add("single-todo");
+            singleTask.id = "task-display";
+            singleTask.classList.add("current" + itemNumber);
+            singleTask.innerHTML = task;
+
+            //Task status checkbox
+
+            var taskStatus = document.createElement("input");
+            taskStatus.id = "task-done";
+            taskStatus.classList.add("current" + itemNumber);
+            taskStatus.name = "task-status";
+            taskStatus.type = "checkbox";
+
+            
+            // Edit task button
+            var editTask = document.createElement("button");
+            editTask.id = "edit-task";
+            editTask.textContent = "Edit";
+            editTask.classList.add("current" + itemNumber);
+
+            //Delete task button
+            var deleteTask = document.createElement("button");
+            deleteTask.id = "delete-task";
+            deleteTask.textContent = "Delete";
+            deleteTask.classList.add("current" + itemNumber);
+
+            
+            //Insert the task below the form
+            var todos = document.getElementById("todos");
+
+            todos.insertAdjacentElement("afterbegin", taskStatus);
+            taskStatus.insertAdjacentElement("afterend", singleTask);
+            singleTask.insertAdjacentElement("afterend", editTask);
+            editTask.insertAdjacentElement("afterend", deleteTask);
+            clearTask.value = "";
+
+            //Stroke task if done
+
+            
+                
+
+            //Delete a task
+
+            deleteTask.addEventListener("click", function(){
+               
+            });
+        }
+
+        var checkTask = document.getElementById("task-done");
+            
+            taskStatus.addEventListener("click", function(){
+                
+                if(this.checked = true){
+                    singleTask.classList.add("done");
+                }
+
+            });
+        function loaded(){}
+        window.onload = loaded;
+
+    </script>
+</body>
+</html>
